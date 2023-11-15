@@ -1,12 +1,12 @@
 # Configuracion arch i3 minimalista
 ## dependencias
 AUR:
-    - compton
+    - compton   
     - 
 Repos Oficiales:
-    - Rofi
-    - i3
-    - i3status 
+    - Rofi  
+    - i3 
+    - i3status\n 
     - scrot 
     - alacritty
     - feh
@@ -27,3 +27,6 @@ mod+shift+f = firefox
 mod+shift+t = thunar
 mod+shift+esc = shutdowm
 printsc = scrot screenshoot
+
+
+Los fondos de pantalla provienen de: https://gruvbox-wallpapers.pages.dev/
