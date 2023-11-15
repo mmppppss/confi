@@ -1,0 +1,23 @@
+local map=function(mode, key, action)
+	vim.api.nvim_set_keymap(mode, key, action, {noremap = true, silent= false})
+end
+
+map('n', 'w', ':w<CR>')
+map('n', 'q', ':q<CR>')
+map('n', '<F2>', ':Explore <CR>')
+map('n', '<F3>t', ':tabnew <CR>')
+map('n', '<F3>c', ':tabclose <CR>')
+map('n', '<F3><LEFT>', ':tabprev <CR>')
+map('n', '<F3><RIGHT>', ':tabnext <CR>')
+map('n', '<F4>f', ':Telescope find_files<CR>')
+map('n', '<F4>b', ':Telescope buffers<CR>')
+map('n', '<F5>c',':vsp | terminal g++ % -o %.out; ./%.out<CR>')
+map('n', '<F5>n',':!node % <CR>')
+map('n', '<F5>p',':vsp | terminal python % <CR>i')
+map('n', '<F5>f',':!firefox % & <CR>')
+map('n', '<F5>j',':vsp | terminal javac %; java % <CR>i')
+
+vim.cmd("let g:user_emmet_leader_key=','")
+vim.cmd("let g:user_emmet_mode='n'")
+vim.cmd("let g:user_emmet_mode='inv'")
+vim.cmd("let g:user_emmet_mode='a'") 
