@@ -3,7 +3,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 #font pango:Monaco 16
 font pango:FreeMono 18
-for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title</span>"
+for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title %class</span>"
 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
@@ -16,6 +16,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+t exec thunar
 bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+m exec thunderbird
 
 
 # kill focused window
@@ -166,7 +167,11 @@ client.urgent               #FAE8A4     #FAE8A4         #211716     #FAE8A4     
 client.placeholder          #000000     #FFFFFF         #E1D3A4     #000000         #FFFFFF
 client.background           #FFFFFF
 #for_window [class="^.*"] border pixel 1px
+
 for_window [class="^.*"] border normal 0
+for_window [window_role="About"] floating enable
+for_window [class="Tk"] floating enable
+for_window [title="Authy"] floating enable
 
 gaps outer 10
 gaps inner 5

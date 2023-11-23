@@ -15,7 +15,7 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 20
 }
 
 #order += "cpu_temperature 0"

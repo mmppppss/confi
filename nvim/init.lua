@@ -16,7 +16,7 @@ require("lazy").setup({
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    "folke/tokyonight.nvim",
+ --   "folke/tokyonight.nvim",
 	"ellisonleao/gruvbox.nvim",
     {
 		"neoclide/coc.nvim", 
@@ -31,7 +31,12 @@ require("lazy").setup({
 		main = "ibl", opts = {} 
 	},
 	'honza/vim-snippets',
-	'junegunn/goyo.vim'
+	'junegunn/goyo.vim',
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+	},
+	'Exafunction/codeium.vim'
 })
 
 require("ibl").setup({

@@ -1,6 +1,7 @@
 require("plugins.coc")
 require("plugins.treesitter")
 require("plugins.coc-snip")
+require("plugins.lualine")
 vim.wo.number = true
 vim.wo.relativenumber = true
 --vim.o.clipboard = unnamedplus
