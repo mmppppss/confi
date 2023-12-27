@@ -1,6 +1,6 @@
 window:
-  opacity: 0.5
+      #style: regular
+  opacity: 0.8
 font:
   normal:
-    family: FreeMono
-    style: regular
+    family: Free Mono

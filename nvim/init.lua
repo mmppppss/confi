@@ -36,7 +36,12 @@ require("lazy").setup({
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
 	},
-	'Exafunction/codeium.vim'
+	'Exafunction/codeium.vim',
+	{
+		'windwp/nvim-autopairs',
+		--event = "InsertEnter",
+		opts = {}
+	}
 })
 
 require("ibl").setup({

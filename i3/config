@@ -3,7 +3,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 #font pango:Monaco 16
 font pango:FreeMono 18
-for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title %class</span>"
+for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title %class </span>"
 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
@@ -68,7 +68,9 @@ bindsym --release $mod+d exec rofi -show run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # Capture a screenshot
-bindsym --release Print exec scrot -e 'mv $f /home/mmppppss/Pictures/screen'
+bindsym --release Print exec kazam -f 
+#scrot -e 'mv $f /home/mmppppss/Pictures/screen'
+bindsym --release Shift+Print exec kazam -a
 
 # Set layout 1
 bindsym $mod+Shift+Return workspace 1; append_layout .config/i3/workspace-1.json
@@ -170,7 +172,10 @@ client.background           #FFFFFF
 
 for_window [class="^.*"] border normal 0
 for_window [window_role="About"] floating enable
-for_window [class="Tk"] floating enable
+for_window [class="Tk"] floating enable 
+for_window [class="sistemadeempleados-main"] floating enable 
+#move container to workspace 2
+for_window [class="VirtualBox Machine"] fullscreen enable
 for_window [title="Authy"] floating enable
 
 gaps outer 10

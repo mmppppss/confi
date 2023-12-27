@@ -1,15 +1,16 @@
 {
   "coc.nvim": { "branch": "release", "commit": "7b9e1ef0a1399907c51d23b6080b94a5aba4a654" },
-  "codeium.vim": { "branch": "main", "commit": "1efe2a2cdf516094bdb211aa8a1d45ef01836207" },
+  "codeium.vim": { "branch": "main", "commit": "949f625902855a436dd08ed220a147976aab4e58" },
   "goyo.vim": { "branch": "master", "commit": "fa0263d456dd43f5926484d1c4c7022dfcb21ba9" },
-  "gruvbox.nvim": { "branch": "main", "commit": "517b012757fbe7a4d6e507baf5cc75837e62734f" },
-  "indent-blankline.nvim": { "branch": "master", "commit": "29be0919b91fb59eca9e90690d76014233392bef" },
+  "gruvbox.nvim": { "branch": "main", "commit": "0940564208a490c173216c3b7d2188b0a5ad3491" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "3084950d1b66426d207064a509477cbfa96362c6" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
+  "nvim-autopairs": { "branch": "master", "commit": "9fd41181693dd4106b3e414a822bb6569924de81" },
   "nvim-comment": { "branch": "main", "commit": "e9ac16ab056695cad6461173693069ec070d2b23" },
-  "nvim-treesitter": { "branch": "master", "commit": "0df364926d39f59471ebc5ca83054d74e457350e" },
-  "nvim-web-devicons": { "branch": "master", "commit": "3523d6e6d40ab11fd66c1b2732b3d6b60affa951" },
-  "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
+  "nvim-treesitter": { "branch": "master", "commit": "454c3a9ba86f841dc3b5bb17d150a873a16b77b4" },
+  "nvim-web-devicons": { "branch": "master", "commit": "aff5f50b34754335a312c9b3dc5b245f605ce437" },
+  "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
-  "vim-snippets": { "branch": "master", "commit": "ccc2fa1529d372f7ac16d5eb07a385a72b50e05d" }
+  "vim-snippets": { "branch": "master", "commit": "a8dc763b3f534ec1a0c0ae5082689c10dcaf9d5f" }
 }

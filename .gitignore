@@ -32,4 +32,10 @@ pavucontrol.ini
 pamac
 zoom.conf
 zoomus.conf
-
+Genymobile/
+fontconfig/
+gtkrc
+gtkrc-2.0
+jgit/
+kazam/
+lazygit/
