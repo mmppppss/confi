@@ -14,8 +14,9 @@
 # Use XFCE's Mousepad (c-s-u, ffff) to edit symbols.
 
 general {
-        colors = true
-        interval = 20
+		output_format="i3bar"
+		colors = true
+        interval = 5
 }
 
 #order += "cpu_temperature 0"
@@ -36,19 +37,19 @@ cpu_temperature 0 {
 
 cpu_usage {
         # f799, nf-mdi-gauge
-        format = "%usage"
+        format = " %usage "
 }
 
 load {
         # f627, nf-mdi-chart_bar
-        format = " %1min"
+        format = " %1min "
 }
 
 memory {
         # f85a, nf-mdi-memory
-        format = "%used"
+        format = " %used "
         threshold_degraded = "1G"
-        threshold_critical = "256M"
+        threshold_critical = "512M"
 }
 
 disk "/" {
@@ -60,9 +61,9 @@ disk "/" {
 
 wireless _first_ {
         # faa8, nf-mdi-wifi
-        format_up = "%quality %ip" 
+        format_up = "%quality %ip " 
         # faa9, nf-mdi-wifi_off
-        format_down = "---"
+        format_down = ""
         color_good = '#d8dee8'
         color_bad = '#d8dee8'
 
@@ -72,17 +73,16 @@ ethernet _first_ {
         # f817, nf-mdi-lan_connect
         format_up = "%ip"
         # f818, nf-mdi-lan_disconnect
-        format_down = "---"
+        format_down = ""
         color_good = '#d8dee8'
         color_bad = '#d8dee8'
 }
 
 volume master {
         # fa7d, nf-mdi-volume_high
-        format = "%volume"
+        format = " %volume  "
         # fc5d, nf-mdi-volume_mute
-        # format_muted = "ﱝ %volume" ??? gets reversed
-        format_muted = "%volume"
+        format_muted = " %volume x "
         device = "default"
         mixer = "Master"
         mixer_idx = 0
@@ -100,6 +100,6 @@ battery all {
 }
 
 tztime local {
-        format = "%d/%m/%Y %H:%M "
+        format = " %d-%m-%Y %H:%M "
 		timezone = "America/La_Paz"
 }

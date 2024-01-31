@@ -1,5 +1,4 @@
 coc
-gtk-3.0
 pulse
 dconf
 QtProject.conf
@@ -14,7 +13,6 @@ VirtualBox
 cef_user_data
 coc
 dconf
-gtk-3.0
 firefox-config
 htop
 kdeconnect
@@ -26,7 +24,6 @@ xfce4
 vokoscreenNG
 vlc
 systemd
-rofi
 pulse
 pavucontrol.ini
 pamac
@@ -39,3 +36,15 @@ gtkrc-2.0
 jgit/
 kazam/
 lazygit/
+GIMP/
+Mousepad/
+autostart/
+kde.org/
+kdeglobals
+kdenlive-layoutsrc
+kdenliverc
+mupen64plus/
+picom/
+ppsspp/
+xfburn/
+xfce4-dict/

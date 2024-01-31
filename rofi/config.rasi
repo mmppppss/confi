@@ -1,0 +1,13 @@
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "~/.local/share/rofi/themes/g"
+configuration {
+    show-icons: true;
+	icon-theme: "WhiteSur";
+	font: "FreeMono 13";
+	columns: 3;
+    lines: 10;
+    width: 60;
+    location: 0;
+	hide-scrollbar: true;
+    sidebar-mode: false;
+}

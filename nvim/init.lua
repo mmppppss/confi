@@ -1,4 +1,3 @@
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -36,7 +35,7 @@ require("lazy").setup({
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
 	},
-	'Exafunction/codeium.vim',
+--	'Exafunction/codeium.vim',
 	{
 		'windwp/nvim-autopairs',
 		--event = "InsertEnter",

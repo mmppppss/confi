@@ -1,0 +1,13 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "Hack 10";
+    columns: 3;
+    lines: 10;
+    width: 60;
+    location: 0;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+    matching: fuzzy;
+    terminal: "gnome-terminal";
+}

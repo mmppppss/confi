@@ -2,14 +2,13 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 #font pango:Monaco 16
-font pango:FreeMono 18
-for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title %class </span>"
+font pango:FreeMono 16
+for_window [class=".*"] title_format "<span font='FreeMono 9'> > %title </span>"
 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -63,15 +62,15 @@ bindsym $mod+z focus child
 
 
 # start rofi
-bindsym --release $mod+d exec rofi -show run
+bindsym --release $mod+d exec rofi -show drun
 #dmenu
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # Capture a screenshot
-bindsym --release Print exec kazam -f 
-#scrot -e 'mv $f /home/mmppppss/Pictures/screen'
-bindsym --release Shift+Print exec kazam -a
+bindsym --release Shift+Print exec xfce4-screenshooter -r -s ~/Pictures/$(tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ).png
 
+bindsym --release Print exec xfce4-screenshooter -f -s ~/Pictures/$(tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ).png
+ 
 # Set layout 1
 bindsym $mod+Shift+Return workspace 1; append_layout .config/i3/workspace-1.json
 
@@ -81,13 +80,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-# Increase screen brightness 
+# screen brightness 
 bindsym XF86MonBrightnessUp exec brightnessctl s 1+
-# Decrease screen brightness by 5
 bindsym XF86MonBrightnessDown exec brightnessctl s 1-
 
 # Toggle pause/play on the song that is currently paused or playing
-# bindsym XF86AudioPlay exec togglepauseplay
+#bindsym XF86AudioPlay exec togglepauseplay
 
 # Switch to the next song
 # bindsym XF86AudioNext exec cmus-remote -n
@@ -142,18 +140,19 @@ mode "resize" {
         bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+bindsym $mod+r mode resize
 
-bindsym $mod+r mode "resize"
-
+bindsym Mod1+u exec "setxkbmap -layout 'us,us'"
+bindsym Mod1+e exec "setxkbmap -layout 'es,es'"
 # Window Borders
 # Client Class              <border>    <background>    <text>      <indicator>     <child_border>
 #client.focused              #FAE8A4     #FAE8A4         #211716     #FAE8A4         #FAE8A4
@@ -173,12 +172,10 @@ client.background           #FFFFFF
 for_window [class="^.*"] border normal 0
 for_window [window_role="About"] floating enable
 for_window [class="Tk"] floating enable 
-for_window [class="sistemadeempleados-main"] floating enable 
-#move container to workspace 2
-for_window [class="VirtualBox Machine"] fullscreen enable
+for_window [class="VirtualBox Machine"] floating enable
 for_window [title="Authy"] floating enable
 
-gaps outer 10
+gaps outer 5
 gaps inner 5
 
 #start clipboard
@@ -189,6 +186,8 @@ exec --no-startup-id synclient TapButton1=1
 
 # Start compton
 exec --no-startup-id compton -b
+#start picom
+#exec --no-startup-id picom -b
 
 # Set the background
 exec --no-startup-id bash $HOME/.config/scripts/setWall.sh
@@ -207,7 +206,8 @@ exec --no-startup-id xinput set-prop 12 279 1
 #start wired notification
 exec --no-startup-id wired
 
+exec --no-startup-id nm-applet
 bar{
-	status_command i3status
+	status_command i3status 
     font pango:FreeMono 10
 }
