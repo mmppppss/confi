@@ -48,7 +48,7 @@ load {
 memory {
         # f85a, nf-mdi-memory
         format = " %used "
-        threshold_degraded = "1G"
+        threshold_degraded = "1G "
         threshold_critical = "512M"
 }
 
@@ -71,7 +71,7 @@ wireless _first_ {
 
 ethernet _first_ {
         # f817, nf-mdi-lan_connect
-        format_up = "%ip"
+        format_up = "%ip "
         # f818, nf-mdi-lan_disconnect
         format_down = ""
         color_good = '#d8dee8'
@@ -80,9 +80,9 @@ ethernet _first_ {
 
 volume master {
         # fa7d, nf-mdi-volume_high
-        format = " %volume  "
-        # fc5d, nf-mdi-volume_mute
-        format_muted = " %volume x "
+        format = " %volume 🔊"
+        # fc5d, nf-mdi-volume_mutifuer
+        format_muted = " %volume 🔇️"
         device = "default"
         mixer = "Master"
         mixer_idx = 0

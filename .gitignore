@@ -1,4 +1,3 @@
-coc
 pulse
 dconf
 QtProject.conf
@@ -30,9 +29,12 @@ pamac
 zoom.conf
 zoomus.conf
 Genymobile/
+FreeCAD
 fontconfig/
 gtkrc
 gtkrc-2.0
+gtk-2.0
+gtk-4.0
 jgit/
 kazam/
 lazygit/
@@ -44,7 +46,7 @@ kdeglobals
 kdenlive-layoutsrc
 kdenliverc
 mupen64plus/
-picom/
-ppsspp/
 xfburn/
 xfce4-dict/
+swi-prolog
+menus
