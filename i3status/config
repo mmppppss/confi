@@ -100,6 +100,6 @@ battery all {
 }
 
 tztime local {
-        format = " %d-%m-%Y %H:%M "
+        format = "%a %d, %m/%Y %H:%M "
 		timezone = "America/La_Paz"
 }
