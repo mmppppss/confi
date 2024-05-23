@@ -4,6 +4,7 @@ require("plugins.coc-snip")
 require("plugins.lualine")
 require("plugins.gruvbox")
 require("plugins.ibl")
+require("plugins.codeium")
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.confirm = true

@@ -23,7 +23,7 @@ for_window [window_role="About"] floating enable
 for_window [class="Tk"] floating enable 
 for_window [class="VirtualBox Machine"] floating enable
 for_window [title="Authy"] floating enable
-
+for_window [class="Frame"] floating enable
 gaps outer 5
 gaps inner 5
 
