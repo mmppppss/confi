@@ -1,3 +1,14 @@
+chromium/
+fvm/
+gnome-boxes/
+libvirt/
+nvim-gtk/
+nvim-qt/
+scripts/Carpeta nueva/
+user-dirs.dirs
+user-dirs.locale
+window-geometry.conf
+
 pulse
 dconf
 QtProject.conf
@@ -53,7 +64,7 @@ menus
 StarUML/
 bleachbit/
 flutter/
-libreoffice/
+libreoffice
 photoflare.io/
 qBittorrent/
 whatsapp-for-linux/
