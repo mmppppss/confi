@@ -15,6 +15,7 @@ require("lazy").setup({
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
+	--'morhetz/gruvbox',
 	"ellisonleao/gruvbox.nvim",
 	{
 		"neoclide/coc.nvim", 
@@ -43,9 +44,9 @@ require("lazy").setup({
 	},
 	"puremourning/vimspector",
     {
-        "lukas-reineke/headlines.nvim",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true, -- or `opts = {}`
+    	"lukas-reineke/headlines.nvim",
+    	dependencies = "nvim-treesitter/nvim-treesitter",
+    	config = true, -- or `opts = {}`
     },
 	'mattn/emmet-vim'
 })

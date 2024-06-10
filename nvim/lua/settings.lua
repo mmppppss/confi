@@ -24,3 +24,6 @@ vim.cmd([[
 	highlight LineNrBelow guifg=#5c6370
 	highlight LineNr guifg=#fabd2f
 ]])
+-- remap emmet <c-y> to comma
+vim.g.user_emmet_leader_key = ','
+vim.api.nvim_set_keymap('n', '<tab>', '<plug>(emmet-expand-abbr)', {noremap = true, silent = true})
