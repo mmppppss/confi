@@ -96,9 +96,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+Home exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 #shutdown
-bindsym $mod+Shift+Escape exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Yes, shutdown' 'shutdown now'"
+bindsym $mod+Shift+Delete exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Yes, shutdown' 'shutdown now'"
+
+bindsym $mod+Shift+End exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to suspend?' -b 'Yes, shutdown' 'systemctl suspend'"
 
 
 bindsym Mod1+u exec "setxkbmap -layout 'us,us'"
@@ -109,9 +111,16 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
+#VOLUME
+bindsym Mod1+Next exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym Mod1+Prior exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym Mod1+Pause exec --no-startup-id pactl set-sink-mute 0 toggle
+
 # screen brightness
 bindsym XF86MonBrightnessUp exec brightnessctl s 1+
 bindsym XF86MonBrightnessDown exec brightnessctl s 1-
+bindsym $mod+Next exec brightnessctl s 1+
+bindsym $mod+Prior exec brightnessctl s 1-
 
 # Toggle pause/play on the song that is currently paused or playing
 #bindsym XF86AudioPlay exec togglepauseplay

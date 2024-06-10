@@ -29,4 +29,5 @@ exec --no-startup-id xinput set-prop 12 279 1
 exec --no-startup-id wired
 
 exec --no-startup-id nm-applet
+exec bash /etc/remap.sh
 
