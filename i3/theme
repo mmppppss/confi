@@ -18,6 +18,9 @@ client.placeholder          #000000     #FFFFFF         #E1D3A4     #000000     
 client.background           #FFFFFF
 
 for_window [class="^.*"] border pixel 0px
+for_window [title="clock"] floating enable
+for_window [title="clock"] move absolute position 1250px 680px
+for_window [title="clock"] sticky enable
 #for_window [class="^.*"] border normal 0px
 for_window [window_role="About"] floating enable
 for_window [class="Tk"] floating enable 

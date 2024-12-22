@@ -1,3 +1,5 @@
+#exec setxkbmap es dvorak
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #start clipboard
@@ -29,5 +31,5 @@ exec --no-startup-id xinput set-prop 12 279 1
 exec --no-startup-id wired
 
 exec --no-startup-id nm-applet
-exec bash /etc/remap.sh
 
+exec --no-startup-id i3-sensible-terminal -T clock -o "window.dimensions.lines=4" -o "window.dimensions.columns=12" -e clock

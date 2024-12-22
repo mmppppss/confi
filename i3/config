@@ -1,6 +1,6 @@
 include modes
-include theme
 include startup
+include theme
 set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -77,7 +77,6 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-bindsym $mod+Mod1+1 workspace 11
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -100,11 +99,12 @@ bindsym $mod+Shift+Home exec "i3-nagbar -t warning -m 'Do you really want to exi
 #shutdown
 bindsym $mod+Shift+Delete exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Yes, shutdown' 'shutdown now'"
 
-bindsym $mod+Shift+End exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to suspend?' -b 'Yes, shutdown' 'systemctl suspend'"
+bindsym $mod+Shift+End exec --no-startup-id "systemctl suspend"
 
 
 bindsym Mod1+u exec "setxkbmap -layout 'us,us'"
 bindsym Mod1+e exec "setxkbmap -layout 'es,es'"
+bindsym Mod1+m exec "setxkbmap es dvorak"
 
 #VOLUME
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -121,6 +121,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 1+
 bindsym XF86MonBrightnessDown exec brightnessctl s 1-
 bindsym $mod+Next exec brightnessctl s 1+
 bindsym $mod+Prior exec brightnessctl s 1-
+bindsym $mod+Insert exec bash /home/mmppppss/.config/scripts/setWall.sh
 
 # Toggle pause/play on the song that is currently paused or playing
 #bindsym XF86AudioPlay exec togglepauseplay
@@ -134,10 +135,27 @@ bindsym $mod+Prior exec brightnessctl s 1-
 bar{
 	status_command i3status 
     font pango:FreeMono 10
+
+	workspace_buttons on
+	tray_output primary
+	position bottom
+	height 19
+	separator_symbol "|"
+	
 	colors{
 		background #212121
+		separator #00FF00
+		focused_workspace #212121 #303030 #00FF00
+		active_workspace #00FF00 #303030 #00FF00
+		#active_workspace_border #00FF00
+		#active_workspace_text #00FF00
+		#urgent_workspace #00FF00
 	}
+	mode hide
+	hidden_state hide
+	modifier $mod
 }
+
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode resize
 bindsym $mod+y mode show

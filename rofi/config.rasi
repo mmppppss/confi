@@ -1,15 +1,16 @@
 //@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
 //@theme "~/.local/share/rofi/themes/g"
 configuration {
     show-icons: true;
-	icon-theme: "WhiteSur";
+	icon-theme: "Gruvbox-Plus-Dark";
 	font: "FreeMono 13";
 	columns: 3;
     lines: 6;
-    width: 60;
+    width: 600;
     location: 0;
-	hide-scrollbar: true;
-    sidebar-mode: false;
+//	hide-scrollbar: true;
+    sidebar-mode: true;
 }
 //@theme "/home/mmppppss/.local/share/rofi/themes/slate.rasi"
 //@theme "/home/mmppppss/.local/share/rofi/themes/slate.rasi"

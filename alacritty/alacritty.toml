@@ -3,6 +3,8 @@ opacity = 0.95
 
 [font.normal]
 family = "FreeMono"
+[font.italic]
+family = "JetBrains mono thin"
 
 [cursor]
 style= "Beam"
@@ -31,4 +33,3 @@ yellow = "0xd79921"
 [colors.primary]
 background = "0x282828"
 foreground = "0xebdbb2"
-
